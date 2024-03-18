@@ -2,3 +2,6 @@
     npm create vite@latest
 2. cai dat tailwind css
     https://tailwindcss.com/docs/guides/vite
+3. cai dat github
+4. pages and routes
+    npm i react-router-dom
