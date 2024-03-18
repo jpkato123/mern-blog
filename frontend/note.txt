@@ -1,0 +1,4 @@
+1. cai dat react: 
+    npm create vite@latest
+2. cai dat tailwind css
+    https://tailwindcss.com/docs/guides/vite
