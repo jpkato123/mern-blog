@@ -5,3 +5,6 @@
 3. cai dat github
 4. pages and routes
     npm i react-router-dom
+5. header component create
+     npm install flowbite-react : https://www.npmjs.com/package/flowbite-react
+     npm install react-icons
