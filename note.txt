@@ -14,4 +14,6 @@
     - npm i express
     - create file index.js in api
     - npm i nodemon
-    
+7 npm i mongoose
+    npm i express
+    - create connect to mongodb
