@@ -8,3 +8,10 @@
 5. header component create
      npm install flowbite-react : https://www.npmjs.com/package/flowbite-react
      npm install react-icons
+6 api create
+    - cd .. to Blog to create api
+    - npm init -y => create package.json
+    - npm i express
+    - create file index.js in api
+    - npm i nodemon
+    
