@@ -18,3 +18,4 @@
     npm i express
     - create connect to mongodb
 8. create user model
+9. create a test API route
