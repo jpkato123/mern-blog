@@ -22,3 +22,4 @@
     create user.model.js, user.controller.js
 10. create signup api route
     npm i bcryptjs
+11. add a middleware and a function to handle error
