@@ -19,3 +19,6 @@
     - create connect to mongodb
 8. create user model
 9. create a test API route
+    create user.model.js, user.controller.js
+10. create signup api route
+    npm i bcryptjs
