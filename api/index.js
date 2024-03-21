@@ -1,13 +1,12 @@
-import { configDotenv } from 'dotenv';
-import e from 'express';
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 
-//process.env.MONGO
+//process.env.REACT_APP_MONGO chua chay
 dotenv.config();
+// console.log(process.env.REACT_APP_MONGO)
 mongoose
-.connect(process.env.MONGO)
+.connect(process.env.REACT_APP_MONGO_DB)
 .then(()=>{
     console.log('mongodb is connected')
 })
