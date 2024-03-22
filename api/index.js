@@ -17,7 +17,7 @@ console.log(err)
 });
 const app = express();
 
-app.use(express.json());
+app.use(express.json());// de hien thi file json
 app.listen(3000,()=>{
     console.log('server is running on port 3000')
 });
@@ -26,7 +26,7 @@ app.listen(3000,()=>{
 app.use('/api/user',userRoutes); // --> api/user/test
 app.use('/api/auth',authRoutes); //signup api: /api/auth/signup
 
-
+//middleware
 app.use((err,req,res,next)=>{
     const statusCode = err.statusCode || 500;
     const message = err.message || 'internal Server error';
