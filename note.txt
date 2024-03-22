@@ -24,3 +24,4 @@
     npm i bcryptjs
 11. add a middleware and a function to handle error
 12. signup page ui 
+13. add functionaly to the sign up page
