@@ -26,3 +26,5 @@
 12. signup page ui 
 13. add functionaly to the sign up page
 14. create and add the footer component
+15.create signin api
+    npm i jsonwebtoken
