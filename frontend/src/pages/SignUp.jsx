@@ -29,7 +29,7 @@ const SignUp = () => {
         return setErrorMessage(data.message);
       }
       setLoading(false);
-      if(res.ok){
+      if(res.ok){//data.success ===true
         navigate("/sign-in");
       }
     } catch (error) {
