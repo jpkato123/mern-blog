@@ -29,3 +29,7 @@
 15.create signin api
     npm i jsonwebtoken
 16.complete sign in page functionaly
+17. add redux toolkit
+    https://redux-toolkit.js.org/tutorials/quick-start
+    npm install @reduxjs/toolkit react-redux
+    chu y: cai tren frontend not backend
