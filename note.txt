@@ -33,3 +33,5 @@
     https://redux-toolkit.js.org/tutorials/quick-start
     npm install @reduxjs/toolkit react-redux
     chu y: cai tren frontend not backend
+18. add redux persist // luu tru dang nhap
+     npm i redux-persist//client forder
