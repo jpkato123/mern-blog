@@ -35,3 +35,8 @@
     chu y: cai tren frontend not backend
 18. add redux persist // luu tru dang nhap
      npm i redux-persist//client forder
+19. add goolge oauth functionaly
+    https://firebase.google.com/
+    -create project in firebase
+    npm install firebase
+    vao project tao o firebase xong vao authenticate enable project len
