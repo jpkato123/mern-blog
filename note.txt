@@ -40,3 +40,4 @@
     -create project in firebase
     npm install firebase
     vao project tao o firebase xong vao authenticate enable project len
+20.update header component with user data
