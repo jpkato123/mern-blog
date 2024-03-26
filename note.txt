@@ -33,7 +33,7 @@
     https://redux-toolkit.js.org/tutorials/quick-start
     npm install @reduxjs/toolkit react-redux
     chu y: cai tren frontend not backend
-18. add redux persist // luu tru dang nhap
+18. add redux persist // luu tru dang nhap trong local storeage
      npm i redux-persist//client forder
 19. add goolge oauth functionaly
     https://firebase.google.com/

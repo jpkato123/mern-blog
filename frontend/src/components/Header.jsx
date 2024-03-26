@@ -3,14 +3,15 @@ import { Link, useLocation } from 'react-router-dom'
 import {useSelector, useDispatch} from 'react-redux'
 import { toggleTheme } from '../redux/theme/themeSlice'
 import {AiOutlineSearch,} from 'react-icons/ai'
-import { FaMoon } from "react-icons/fa";
+import { FaMoon, FaSun } from "react-icons/fa";
 
 
 
 const Header = () => {
   const path = useLocation().pathname;
   const dispatch = useDispatch()
-  const {currentUser} = useSelector(state=>state.user)
+  const {currentUser} = useSelector(state=>state.user)// bien currentUser cua slice user. hook useSelector de lay trang thai trong store 
+  const {theme} = useSelector(state=>state.theme)//distractor bien theme = state.theme o day la ten slice chu khong phai bien theme khi khoi tao trong themeSlice
   return (
     <Navbar className='border-b-2'>
       <Link to="/" className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>
@@ -29,7 +30,7 @@ const Header = () => {
       </Button>
       <div className='flex gap-2 md:order-2'>
         <Button className='w-12 h-10 hidden sm:inline' color='gray' pill onClick={()=>dispatch(toggleTheme())}>
-          <FaMoon/>
+          {theme=='light'?<FaSun/>:<FaMoon/>}
         </Button>
         {currentUser?(
           <Dropdown
