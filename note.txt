@@ -42,4 +42,6 @@
     vao project tao o firebase xong vao authenticate enable project len
 20.update header component with user data
 21. complete dark mode functionaly
-    su dung toolkit
+    su dung toolkit 
+
+22. make the dashboard private. chi dang nhap moi vao duoc
