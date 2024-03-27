@@ -45,3 +45,13 @@
     su dung toolkit 
 
 22. make the dashboard private. chi dang nhap moi vao duoc
+23. complete sidebar ò the dashboard
+        - URLSearchParams: là một đối tượng trong JavaScript, được sử dụng để xử lý các tham số của URL (Uniform Resource Locator)
+        Dưới đây là một số phương thức quan trọng của URLSearchParams:
+
+        append(name, value): Thêm một cặp tên/tham số vào URLSearchParams.
+        delete(name): Xoá một tham số khỏi URLSearchParams.
+        get(name): Trả về giá trị của tham số có tên được chỉ định.
+        getAll(name): Trả về một mảng chứa tất cả các giá trị của tham số có tên được chỉ định.
+        has(name): Kiểm tra xem một tham số có tồn tại trong URLSearchParams không.
+        set(name, value): Thiết lập giá trị của tham số có tên được chỉ định. Nếu tham số đã tồn tại, giá trị của nó sẽ được thay đổi; nếu không, tham số mới sẽ được thêm vào URLSearchParams.
