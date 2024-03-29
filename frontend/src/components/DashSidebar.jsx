@@ -8,7 +8,7 @@ const DashSidebar = () => {
   const [tab, setTab] = useState("");
   useEffect(() => {
     const urlParams = new URLSearchParams(location.search);
-    const tabFromUrl = urlParams.get("tab");
+    const tabFromUrl = urlParams.get("tab"); //return tab="profile" --> profile
     // console.log(tabFromUrl)
     if (tabFromUrl) {
       setTab(tabFromUrl);
@@ -24,6 +24,7 @@ const DashSidebar = () => {
               icon={HiUser}
               label={"User"}
               labelColor="dark"
+              as='div'
             >
               Profile
             </Sidebar.Item>

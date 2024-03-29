@@ -56,3 +56,5 @@
         has(name): Kiểm tra xem một tham số có tồn tại trong URLSearchParams không.
         set(name, value): Thiết lập giá trị của tham số có tên được chỉ định. Nếu tham số đã tồn tại, giá trị của nó sẽ được thay đổi; nếu không, tham số mới sẽ được thêm vào URLSearchParams.
 24. complete profile page UI
+25. complete user umage upload functionaly
+    npm install --save react-circular-progressbar
