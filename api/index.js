@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import userRoutes from './routes/user.route.js';
 import authRoutes from './routes/auth.route.js';
+import cookieParser from 'cookie-parser';
 
 //process.env.REACT_APP_MONGO chua chay
 dotenv.config();
@@ -18,6 +19,9 @@ console.log(err)
 const app = express();
 
 app.use(express.json());// de hien thi file json
+app.use(cookieParser());
+
+
 app.listen(3000,()=>{
     console.log('server is running on port 3000')
 });

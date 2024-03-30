@@ -58,3 +58,5 @@
 24. complete profile page UI
 25. complete user umage upload functionaly
     npm install --save react-circular-progressbar
+26. add update user API route
+    npm i cookie-paser
