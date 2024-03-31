@@ -5,6 +5,7 @@ import bcryptjs from "bcryptjs";
 export const test = (req, res) => {
   res.json({ message: "api working !" });
 };
+
 export const updateUser = async (req, res, next) => {
   if (req.user.id !== req.params.userId) {
     return next(errorHandler(403, " you are not allowed to update this user"));
@@ -27,28 +28,28 @@ export const updateUser = async (req, res, next) => {
     if (req.body.username !== req.body.username.toLowerCase()) {
       return next(errorHandler(400, "username must be lowercase"));
     }
-    if (req.body.username.match(/^[a-zA-Z0-9]+$/)) {
+    if (!req.body.username.match(/^[a-zA-Z0-9]+$/)) {
       return next(
         errorHandler(400, "username can only contain letters and numbers")
       );
     }
-    try {
-      const updatedUser = await User.findByIdAndUpdate(
-        req.params.userId,
-        {
-          $set: {
-            username: req.body.username,
-            email: req.body.password,
-            profilePicture: req.body.profilePicture,
-            password: req.body.passowrd,
-          },
+  }
+  try {
+    const updatedUser = await User.findByIdAndUpdate(
+      req.params.userId,
+      {
+        $set: {
+          username: req.body.username,
+          email: req.body.password,
+          profilePicture: req.body.profilePicture,
+          password: req.body.passowrd,
         },
-        { new: true }
-      );
-      const {passowrd, ...rest} = updatedUser._doc;
-      res.status(200).json(rest);
-    } catch (error) {
-      next(error);
-    }
+      },
+      { new: true }
+    );
+    const { passowrd, ...rest } = updatedUser._doc;
+    res.status(200).json(rest);
+  } catch (error) {
+    next(error);
   }
 };

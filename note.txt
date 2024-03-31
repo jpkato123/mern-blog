@@ -60,3 +60,4 @@
     npm install --save react-circular-progressbar
 26. add update user API route
     npm i cookie-paser
+27. complete update user profile page functionaly
