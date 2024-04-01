@@ -65,3 +65,5 @@
 29. complete delete user account functionaly
 30. add signout functionaly
 31. add admin functionaly to the user
+32. complete create a post page UI: frontend
+    npm install react-quill --save
