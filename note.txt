@@ -68,3 +68,4 @@
 32. complete create a post page UI: frontend
     npm install react-quill --save
 33. add create a post API route
+34. complete upload post image functionaly
