@@ -69,3 +69,4 @@
     npm install react-quill --save
 33. add create a post API route
 34. complete upload post image functionaly
+35. create get posts API route
