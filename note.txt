@@ -73,3 +73,4 @@
 36. show user posts inside dashboard
     npm install --save-dev tailwind-scrollbar
 37. add show more functionality to the posts results of the dashboard
+38. add delete post functionality to the dashboard
