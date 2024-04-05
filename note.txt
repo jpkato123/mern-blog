@@ -72,3 +72,4 @@
 35. create get posts API route
 36. show user posts inside dashboard
     npm install --save-dev tailwind-scrollbar
+37. add show more functionality to the posts results of the dashboard
