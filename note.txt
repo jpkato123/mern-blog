@@ -70,7 +70,9 @@
 33. add create a post API route
 34. complete upload post image functionaly
 35. create get posts API route
+35.1 complete post create functionality
 36. show user posts inside dashboard
     npm install --save-dev tailwind-scrollbar
 37. add show more functionality to the posts results of the dashboard
 38. add delete post functionality to the dashboard
+39. add update post functionality
