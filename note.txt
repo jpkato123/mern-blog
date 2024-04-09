@@ -81,3 +81,4 @@
 42. add delete user functionality to the admin user
 43. complete post page functionality
 44. add call to action to the post page
+45. add comment section to the post page
