@@ -1,14 +1,15 @@
 import { Button, Textarea } from "flowbite-react";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Comment from "./Comment";
 
 export default function CommentSection({ postId }) {
   const { currentUser } = useSelector((state) => state.user);
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
-  console.log(comments)
+  const navigate = useNavigate();
+  // console.log(comments)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -36,18 +37,46 @@ export default function CommentSection({ postId }) {
     const getComments = async () => {
       try {
         const res = await fetch(`/api/comment/getPostComments/${postId}`);
-        if(res.ok){
-            const data = await res.json();
-            setComments(data);
+        if (res.ok) {
+          const data = await res.json();
+          setComments(data);
         }
       } catch (error) {
-        console.log(error.message)
+        console.log(error.message);
       }
     };
     getComments();
   }, [postId]);
+
+  const handleLike = async (commentId) => {
+    try {
+      if (!currentUser) {
+        navigate("/sign-in");
+        return;
+      }
+      const res = await fetch(`/api/comment/likeComment/${commentId}`,
+       {
+        method: 'PUT',
+
+       }
+
+      );
+      if(res.ok){
+        const data = await res.json();
+        setComments(comments.map((comment) => 
+          comment._id === commentId ? {
+            ...comment,
+            likes: data.likes,
+            numberOfLikes: data.likes.length,
+          } : comment
+        ))
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
   return (
-    <div className="max-w-2xl mx-auto p-3">
+    <div className="max-w-7xl mx-auto p-3">
       {currentUser ? (
         <div className="flex items-center gap-2 my-5 text-gray-500 text-sm">
           <p>Signed in as:</p>
@@ -104,7 +133,7 @@ export default function CommentSection({ postId }) {
             </div>
           </div>
           {comments.map((comment) => (
-            <Comment key={comment._id} comment={comment} />
+            <Comment key={comment._id} comment={comment} onLike={handleLike} />
           ))}
         </>
       )}

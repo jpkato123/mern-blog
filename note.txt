@@ -84,3 +84,4 @@
 45. add comment section to the post page
 46. show the comments of a post
     npm i moment // dung de hien thoi gian binh luan
+47. add like functionality to the component
