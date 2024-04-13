@@ -89,3 +89,4 @@
 49. add delete functionality to the comment section
 50. add recent article section to the post page
     npm install -D @tailwindcss/line-clamp
+51. add comments section to the admin dashboard
