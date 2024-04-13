@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { Button, Textarea } from "flowbite-react";
 
 
-export default function Comment({ comment, onLike, onEdit }) {
+export default function Comment({ comment, onLike, onEdit, onDelete }) {
   const [user, setUser] = useState({});
   const { currentUser } = useSelector((state) => state.user);
   const [isEditting, setIsEditting] = useState(false);
@@ -74,19 +74,19 @@ export default function Comment({ comment, onLike, onEdit }) {
             />
             <div className="flex justify-end gap-2 text-xs">
               <Button
-              type="button"
-              size='sm'
-              gradientDuoTone={'purpleToBlue'}
-              onClick={handleSave}
+                type="button"
+                size="sm"
+                gradientDuoTone={"purpleToBlue"}
+                onClick={handleSave}
               >
                 Save
               </Button>
               <Button
-              type="button"
-              size='sm'
-              gradientDuoTone={'purpleToBlue'}
-              outline
-              onClick={() => setIsEditting(false)}
+                type="button"
+                size="sm"
+                gradientDuoTone={"purpleToBlue"}
+                outline
+                onClick={() => setIsEditting(false)}
               >
                 Cancel
               </Button>
@@ -115,13 +115,22 @@ export default function Comment({ comment, onLike, onEdit }) {
               </p>
               {currentUser &&
                 (currentUser._id === comment.userId || currentUser.isAdmin) && (
-                  <button
-                    type="button"
-                    className="text-gray-400 hover:text-blue-500"
-                    onClick={handleEdit}
-                  >
-                    Edit
-                  </button>
+                  <>
+                    <button
+                      type="button"
+                      className="text-gray-400 hover:text-blue-500"
+                      onClick={handleEdit}
+                    >
+                      Edit
+                    </button>
+                    <button
+                      type="button"
+                      className="text-gray-400 hover:text-red-500"
+                      onClick={() => onDelete(comment._id)}
+                    >
+                      Delete
+                    </button>
+                  </>
                 )}
             </div>
           </>
