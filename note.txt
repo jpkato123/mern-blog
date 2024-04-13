@@ -87,3 +87,5 @@
 47. add like functionality to the component
 48. add edit functionality to the comment component
 49. add delete functionality to the comment section
+50. add recent article section to the post page
+    npm install -D @tailwindcss/line-clamp
