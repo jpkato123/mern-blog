@@ -92,3 +92,4 @@
 51. add comments section to the admin dashboard
 52. add dashboard overview to the admin dashboard
 53. complete the home page
+54. complete search page
