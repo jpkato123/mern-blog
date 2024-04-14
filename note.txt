@@ -93,3 +93,4 @@
 52. add dashboard overview to the admin dashboard
 53. complete the home page
 54. complete search page
+55. complete obout and projects pages
