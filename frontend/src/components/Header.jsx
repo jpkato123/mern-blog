@@ -71,9 +71,10 @@ const handleSubmit = (e) => {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
       </form>
-      <Button className="w-12 h-10 lg:hidden" pill color="gray">
-        <AiOutlineSearch />
-      </Button>
+        <Button className="w-12 h-10 lg:hidden" pill color="gray" onClick={handleSubmit}>
+          <AiOutlineSearch />
+        </Button>
+
       <div className="flex gap-2 md:order-2">
         <Button
           className="w-12 h-10 hidden sm:inline"
